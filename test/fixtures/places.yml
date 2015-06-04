@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city: MyString
+  raion: MyString
+  address: MyString
+  workinghours: MyString
+  mintime: MyString
+
+two:
+  city: MyString
+  raion: MyString
+  address: MyString
+  workinghours: MyString
+  mintime: MyString

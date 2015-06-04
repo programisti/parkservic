@@ -1,0 +1,12 @@
+script[src="js/sequence.jquery-min.js"]
+script[src="js/sequence.js"]
+section.slider
+  .flexslider.home
+    ul.slides
+      - @slider.each do |s|
+        li
+          = image_tag s.image.url
+h1.entry-title
+  span.top-left-ribbon
+  | დაივიწყეთ პარკირების პრობლემები!
+  span.right-ribbon

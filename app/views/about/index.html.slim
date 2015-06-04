@@ -1,0 +1,9 @@
+.row
+  .headline.marginbottom40.margintop40.center
+    h4
+      | რა არის პარკსერვისი?
+.row
+  .span12
+    ul
+      - if @about
+        = @about.content.html_safe

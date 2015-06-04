@@ -1,0 +1,95 @@
+doctype html
+html[lang="en"]
+  head
+    meta[charset="utf-8"]
+    title
+      | Parkservice
+    meta[name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"]
+    link[href="http://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet" type="text/css"]
+    = stylesheet_link_tag "application", media: "all"
+    link[rel="stylesheet" type="text/css" href="css/style.css"]
+    link[rel="stylesheet" type="text/css" href="css/style-responsive.css"]
+    link[rel="stylesheet" type="text/css" href="css/override.css"]
+    link#ribbons[rel="stylesheet" type="text/css" href="css/ribbons.css"]
+    link[rel="stylesheet" media="screen" href="css/sequence.css"]
+    link#colors[rel="stylesheet" type="text/css" media="all" href="css/colors/default.css"]
+    script[src="js/jquery.js"]
+    script[src="js/modernizr.js"]
+    script[src="js/selectnav.js"]
+    script[src="js/flexslider.js"]
+    script[src="js/twitter.js"]
+    script[src="js/fancybox.js"]
+    script[src="js/isotope.js"]
+    script[src="js/bootstrap.js"]
+    script[src="js/jquery.fitvids.js"]
+    script[src="js/custom.js"]
+    link[rel="stylesheet" type="text/css" href="css/switcher.css"]
+    script[src="js/switcher.js"]
+    meta[http-equiv="Content-Type" content="text/html; charset=utf-8"]
+  body
+    #wrapper.container
+      .ie-dropdown-fix
+        #header.row
+          .span5.logo
+            a href="#"
+              = image_tag("logo.jpg", size: "170x70", alt: "")
+          .span4.pull-right
+            ul.social-icons
+              li.facebook
+                a target="_blank" href="https://www.facebook.com/pages/Park-Service/1412239555768449" Facebook
+            #contact-top
+              ul
+                li
+                  .phone-number
+                      i.icon-phone
+                      | 2 700 100
+
+        #navigation
+          .left-corner
+          .right-corner
+          ul#nav.menu
+            li
+              = link_to 'მთავარი', '/home', id: cp('/home')
+            li
+              = link_to 'რა არის პარკსერვისი', '/about', id: cp('/about')
+            li
+              = link_to 'როგორ მუშაობს', '/how', id: cp('/how')
+            li
+              = link_to 'სად მუშაობს', '/map', id: cp('/map')
+            li
+              = link_to 'სერვისის პაკეტები', '/pricing', id: cp('/pricing')
+            li
+              = link_to 'კონტაქტი', '/contact', id: cp('/contact')
+        .clear
+      = yield
+      .push
+      #scroll-to-top
+        a href="#" title="^"
+    section#phone style="display:none;"
+      .row
+        .center.margintop60.marginbottom60
+          h1
+            i.icon-phone
+            |  დაგვიკავშირდით 2 700 100
+    section#footer-section
+      #footer.paddingbottom
+        .container
+          .row
+            .span4
+              .footer-headline
+                h4
+                  | დამატებითი ინფორმაცია 
+              p
+                ul
+                  li
+                    a href="/faq" 
+                      | ხშირად დასმული კითხვები 
+                  li
+                    a href="/terms" 
+                      | მომსახუროების პირობები 
+              .clear
+      #footer.footer-bottom[style="background: #111;"]
+        .container
+          .span12
+            #footer-bottom
+              |  © 2015 ყველა უფლება დაცულია შპს "პარკსერვისი"-ის მიერ 

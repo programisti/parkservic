@@ -1,0 +1,58 @@
+= javascript_include_tag "google-maps"
+= javascript_include_tag "map"
+= stylesheet_link_tag("map")
+link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"
+script src="js/jquery.dataTables.min.js"
+
+.row
+  .headline.marginbottom40.margintop40.center
+    h4
+      | სად მუშაობს?
+.row
+  .span12
+    div id="map" 
+br
+.row
+  .span12
+    table.table#places
+      thead
+        tr
+          td
+            b ქალაქი
+          td
+            b რაიონი
+          td
+            b მისამართი
+          td
+            b სამუშაო საათები
+          td
+            b მინ. დრო, სერვისის მიღებამდე დასარეკად
+      tbody
+        - @places.each do |p|
+          tr
+            td
+              = p.city
+            td
+              = p.raion
+            td
+              = p.address
+            td
+              = p.workinghours
+            td
+              = p.mintime
+javascript:
+  var places = #{raw @places.to_json};
+  var nplaces = places.length;
+
+  var markers = new Array(#{@places.length});
+  var infoWindowContent = new Array(#{@places.length});
+
+  for (var i = 0; i < nplaces; i++) {
+    markers[i] = new Array(3);
+    infoWindowContent[i] = new Array(1);
+
+    markers[i][0] = places[i].address
+    markers[i][1] = places[i].lat
+    markers[i][2] = places[i].lon
+    infoWindowContent[i][0] = '<div class="info_content"><h3>'+ places[i].address +'</h3><p>მინიმალური დრო, სერვისის მიღებამდე დასარეკათ: '+places[i].mintime +'</p><div>'; 
+  }

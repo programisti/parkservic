@@ -1,0 +1,25 @@
+.row
+  .headline.marginbottom40.margintop40.center
+    h4
+      | რა არის პარკსერვისი?
+.row
+  .span12
+    - if @contact.present?
+      = @contact.content
+br
+.row
+  .span12
+    #contact-form
+      form
+        fieldset
+          label
+            | სახელი
+          input.input-xlarge[type="text"]
+          label
+            | ელექტრონული ფოსტა
+          input.input-xlarge[type="text"]
+          label
+            | კომენტარი
+          textarea.input-xxlarge[rows="6"]
+        button.btn.orange-button[type="submit"]
+          | გაგზავნა

@@ -1,0 +1,20 @@
+.row
+  .headline.marginbottom40.margintop40.center
+    h4
+      |  როგორ მუშაობს
+.row
+  - @how.each do |how|
+    .span4
+      .info-pad.alert.alert-success
+        .info-pad-title
+          h3
+            = how.title
+        p
+          = how.content.html_safe
+        .clear
+.row
+  .text-center
+    |  * გთხოვთ, გაითვალისწინოთ, რომ შეუფერხებელი სერვისის მისაწოდებლად დარეკვა საჭიროა მინიმუმ 15 წუთით ადრე 
+    br
+    a.btn.orange-button[href="/pricing"]
+      | შემოგვიერთდით

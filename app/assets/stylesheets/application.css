@@ -1,0 +1,7 @@
+//= require active_admin/editor/wysiwyg
+//= require map
+.phone-number{
+  font-size: 26px;
+  color: #ee8233;
+}
+
