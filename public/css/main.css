@@ -66,9 +66,6 @@ body {
 
 .thumbnail{border: none !important; box-shadow: none;}
 
-h3, h2 ,h1 ,h4{
-
-    font-weight: normal !important;
-
+h3 {
+  color: #ee8233;
 }
-

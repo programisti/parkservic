@@ -5,19 +5,22 @@ script[src="js/jquery-ui.min.js"]
 .row
   .headline.marginbottom40.margintop40.center
     h4
-      |  სერვის პაკეტები
+      |  სერვისის პაკეტები
 .row
   .span4.tables.offset2
     .ptable
       h3
-        | 1-კვირიანი ულიმიტო
+        | ერთ კვირიანი ულიმიტო
       ul
         li
-          |  სერვისების რაოდენობა ულიმიტო 
+          |  სერვისების რაოდენობა -  
+          strong ულიმიტო 
         li
-          |  მოქმედების ვადა 1 კვირა
+          |  მოქმედების ვადა -  
+          strong 1 კვირა
         li
-          |  მომსახუროების წერტილები - თბილისის გამზირები და ცენტრალური ქუჩები
+          |  მომსახურების არეალი - 
+          strong   თბილისის გამზირები და ცენტრალური ქუჩები
       h4.entry-title.entry-title-pricing
         span.left-ribbon
         |  25 ლარი 
@@ -28,14 +31,17 @@ script[src="js/jquery-ui.min.js"]
   .span4.tables
     .ptable
       h3
-        | 1-თვიანი ულიმიტო 
+        | ერთ თვიანი ულიმიტო 
       ul
         li
-          | სერვისების რაოდენობა ულიმიტო
+          | სერვისების რაოდენობა - 
+          strong ულიმიტო
         li
-          | მოქმედების ვადა 30 დღე 
+          | მოქმედების ვადა - 
+          strong 30 დღე 
         li
-          |  მომსახუროების წერტილები - თბილისის გამზირები და ცენტრალური ქუჩები
+          |  მომსახურების არეალი - 
+          strong თბილისის გამზირები და ცენტრალური ქუჩები
       h4.entry-title.entry-title-pricing
         span.left-ribbon
         | 75 ლარი 
@@ -43,7 +49,7 @@ script[src="js/jquery-ui.min.js"]
       a.sign-up href="#" data-toggle="modal" data-target="#myModal"
         span
           | შემოგვიერთდით!
-.row
+.row style="display:none;"
   .span10.offset1.margintop40
     h1.center
       | შემოწმება 
@@ -66,13 +72,13 @@ script[src="js/jquery-ui.min.js"]
       .modal-header
         button.close type="button" data-dismiss="modal"
           | &times;
-        h3.modal-title შეტყობინება 
+        h3.modal-title ძვირფასო მომხმარებლებო! 
       .modal-body
-        br
         p
-          | ძვირფასო მომხმარებლებო!
-          br
-          | გადახდა შესაძლებელია TBC PAY-ს სწრაფი გადახდის აპარატებში.
+          | გადახდა შესაძლებელია TBC PAY-სა და MultiPay-ს სწრაფი გადახდის აპარატებით.
           br
           | მალე გადახდას ჩვენი ვებ-გვერდიდანაც შეძლებთ.
+        br
+        = image_tag("logo.jpg", size: "340x140", alt: "")
+        br
         br

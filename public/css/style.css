@@ -807,6 +807,7 @@ a.sign-up:hover {
 
 
 .social-icons li {
+  margin-top: 10px;
   display: inline;
   list-style: none;
   text-indent: -9999px;
@@ -1297,7 +1298,7 @@ transition: all 0.8s;}
   -moz-box-shadow: 0 0 15px rgb(201, 201, 201);
   -webkit-box-shadow: 0 0 15px rgb(201, 201, 201);
 }
-.ptable h3{background: #f8f8f8; padding: 10px; font-size: 30px; text-align: center; border-bottom: 1px solid rgb(226, 226, 226); }
+.ptable h3{background: #f8f8f8; padding: 10px; font-size: 22px; text-align: center; border-bottom: 1px solid rgb(226, 226, 226); }
 .ptable ul{padding:10px; font-size: 15px;}
 .ptable ul li{line-height: 30px; border-bottom: 1px solid rgb(226, 226, 226);}
 .ptable a.sign-up{

@@ -1,9 +1,13 @@
 .row
   .headline.marginbottom40.margintop40.center
     h4
-      | რა არის პარკსერვისი?
+      | რა არის პარკსერვისი
 .row
   .span12
     ul
       - if @about
         = @about.content.html_safe
+.row
+  .span12
+    .center
+      = image_tag @about.image.url
