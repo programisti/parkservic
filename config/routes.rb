@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'faq' => 'faq#index'
   get 'map' => 'map#index'
   get 'terms' => 'term#index'
+  get 'send_mail2' => 'contact#send_mail2'
+  post 'send_mail' => 'contact#send_mail'
   root 'home#index'
 
 end

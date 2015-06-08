@@ -1,0 +1,736 @@
+--
+-- PostgreSQL database dump
+--
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- Name: abouts; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE abouts (
+    id integer NOT NULL,
+    content text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    image_file_name character varying,
+    image_content_type character varying,
+    image_file_size integer,
+    image_updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.abouts OWNER TO rails;
+
+--
+-- Name: abouts_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE abouts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.abouts_id_seq OWNER TO rails;
+
+--
+-- Name: abouts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE abouts_id_seq OWNED BY abouts.id;
+
+
+--
+-- Name: active_admin_comments; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE active_admin_comments (
+    id integer NOT NULL,
+    namespace character varying,
+    body text,
+    resource_id character varying NOT NULL,
+    resource_type character varying NOT NULL,
+    author_id integer,
+    author_type character varying,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.active_admin_comments OWNER TO rails;
+
+--
+-- Name: active_admin_comments_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE active_admin_comments_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.active_admin_comments_id_seq OWNER TO rails;
+
+--
+-- Name: active_admin_comments_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE active_admin_comments_id_seq OWNED BY active_admin_comments.id;
+
+
+--
+-- Name: contacts; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE contacts (
+    id integer NOT NULL,
+    title character varying,
+    content text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.contacts OWNER TO rails;
+
+--
+-- Name: contacts_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE contacts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.contacts_id_seq OWNER TO rails;
+
+--
+-- Name: contacts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE contacts_id_seq OWNED BY contacts.id;
+
+
+--
+-- Name: faqs; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE faqs (
+    id integer NOT NULL,
+    question text,
+    answer text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.faqs OWNER TO rails;
+
+--
+-- Name: faqs_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE faqs_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.faqs_id_seq OWNER TO rails;
+
+--
+-- Name: faqs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE faqs_id_seq OWNED BY faqs.id;
+
+
+--
+-- Name: hows; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE hows (
+    id integer NOT NULL,
+    title character varying,
+    content text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.hows OWNER TO rails;
+
+--
+-- Name: hows_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE hows_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.hows_id_seq OWNER TO rails;
+
+--
+-- Name: hows_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE hows_id_seq OWNED BY hows.id;
+
+
+--
+-- Name: places; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE places (
+    id integer NOT NULL,
+    city character varying,
+    raion character varying,
+    address character varying,
+    workinghours character varying,
+    mintime character varying,
+    lat character varying,
+    lon character varying,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.places OWNER TO rails;
+
+--
+-- Name: places_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE places_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.places_id_seq OWNER TO rails;
+
+--
+-- Name: places_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE places_id_seq OWNED BY places.id;
+
+
+--
+-- Name: rich_rich_files; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE rich_rich_files (
+    id integer NOT NULL,
+    created_at timestamp without time zone,
+    updated_at timestamp without time zone,
+    rich_file_file_name character varying,
+    rich_file_content_type character varying,
+    rich_file_file_size integer,
+    rich_file_updated_at timestamp without time zone,
+    owner_type character varying,
+    owner_id integer,
+    uri_cache text,
+    simplified_type character varying DEFAULT 'file'::character varying
+);
+
+
+ALTER TABLE public.rich_rich_files OWNER TO rails;
+
+--
+-- Name: rich_rich_files_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE rich_rich_files_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.rich_rich_files_id_seq OWNER TO rails;
+
+--
+-- Name: rich_rich_files_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE rich_rich_files_id_seq OWNED BY rich_rich_files.id;
+
+
+--
+-- Name: schema_migrations; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE schema_migrations (
+    version character varying NOT NULL
+);
+
+
+ALTER TABLE public.schema_migrations OWNER TO rails;
+
+--
+-- Name: sliders; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE sliders (
+    id integer NOT NULL,
+    title character varying,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL,
+    image_file_name character varying,
+    image_content_type character varying,
+    image_file_size integer,
+    image_updated_at timestamp without time zone
+);
+
+
+ALTER TABLE public.sliders OWNER TO rails;
+
+--
+-- Name: sliders_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE sliders_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.sliders_id_seq OWNER TO rails;
+
+--
+-- Name: sliders_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE sliders_id_seq OWNED BY sliders.id;
+
+
+--
+-- Name: terms; Type: TABLE; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE TABLE terms (
+    id integer NOT NULL,
+    content text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+ALTER TABLE public.terms OWNER TO rails;
+
+--
+-- Name: terms_id_seq; Type: SEQUENCE; Schema: public; Owner: rails
+--
+
+CREATE SEQUENCE terms_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.terms_id_seq OWNER TO rails;
+
+--
+-- Name: terms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: rails
+--
+
+ALTER SEQUENCE terms_id_seq OWNED BY terms.id;
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY abouts ALTER COLUMN id SET DEFAULT nextval('abouts_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY active_admin_comments ALTER COLUMN id SET DEFAULT nextval('active_admin_comments_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY contacts ALTER COLUMN id SET DEFAULT nextval('contacts_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY faqs ALTER COLUMN id SET DEFAULT nextval('faqs_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY hows ALTER COLUMN id SET DEFAULT nextval('hows_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY places ALTER COLUMN id SET DEFAULT nextval('places_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY rich_rich_files ALTER COLUMN id SET DEFAULT nextval('rich_rich_files_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY sliders ALTER COLUMN id SET DEFAULT nextval('sliders_id_seq'::regclass);
+
+
+--
+-- Name: id; Type: DEFAULT; Schema: public; Owner: rails
+--
+
+ALTER TABLE ONLY terms ALTER COLUMN id SET DEFAULT nextval('terms_id_seq'::regclass);
+
+
+--
+-- Data for Name: abouts; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY abouts (id, content, created_at, updated_at, image_file_name, image_content_type, image_file_size, image_updated_at) FROM stdin;
+1	<h3>პარკსერვისი ეს არის მარტივი გზა - დაივიწყოთ ქალაქის გადატვირთულ ქუჩებში ავტომობილის პარკირების პრობლემები!</h3><br><p>* პარკსერვისით კომფორტი და პარკინგი ერთად უკვე შესაძლებელია!</p><p>* პარკსერვისით არ ყიდულობთ მხოლოდ კომფორტს, თქვენ მნიშვნელოვნად ზოგავთ თქვენს დროს და თანხებს!</p><p>* პარკსერვისთან ერთად იმაზე ფიქრს, თუ როგორ ან სად მოახერხებთ გაჩერებას ჩვენ გვანდობთ, თქვენ კი მხოლოდ სასიამოვნოსა და საჭიროზე ფიქრს უთმობთ დროს!</p>	2015-06-05 07:19:29.939851	2015-06-05 09:46:26.505384	about.jpg	image/jpeg	58469	2015-06-05 09:46:26.376029
+\.
+
+
+--
+-- Name: abouts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('abouts_id_seq', 1, true);
+
+
+--
+-- Data for Name: active_admin_comments; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY active_admin_comments (id, namespace, body, resource_id, resource_type, author_id, author_type, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: active_admin_comments_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('active_admin_comments_id_seq', 1, false);
+
+
+--
+-- Data for Name: contacts; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY contacts (id, title, content, created_at, updated_at) FROM stdin;
+1	\N	<h3>გთხოვთ, დაგვიკავშირდეთ ელექტრონული ფოსტით მისამართზე:&nbsp;<a target="_blank">info@parkservice.ge&nbsp;</a>ან მოგვწერეთ&nbsp;ქვემოთ მოყვანილი კონტაქტის ფორმის მეშვეობით.</h3>	2015-06-05 07:35:10.375436	2015-06-05 08:35:52.662187
+\.
+
+
+--
+-- Name: contacts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('contacts_id_seq', 1, true);
+
+
+--
+-- Data for Name: faqs; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY faqs (id, question, answer, created_at, updated_at) FROM stdin;
+1	<h3>რატომ უნდა შევიძინო პარკსერვისის მომსახურება?</h3>	<p>პარკსერვისის მომსახურების შეძენით თქვენ ზოგავთ დროსაც და თანხებსაც.</p><p>ალბათ, არც თუ ისე იშვიათად აღმოჩნდებოდით სიტუაციაში, როცა მნიშვნელოვან შეხვედრაზე გაგვიანდებათ ან გსურთ ამა თუ იმ საქმის მოგვარება შესვენებაზე ან უბრალოდ მოკლე დროში მოახერხოთ, მაგრამ სასურველ მისამართზე პარკირება არც თუ ისე უმნიშვნელო დროს უთმობთ, დადიხართ დანიშნულების ადგილის ირგვლივ იმის იმედად, რომ სადმე გამოჩნდება თავისუფალი ადგილი. ხარჯავთ დროს,საწვავს და ენერგიას.</p><p>პარკსერვისის მომსახურებით სარგებლობისას კი თქვენ მშვიდად მიდიხართ სასურველ ადგილას და აღარ ზრუნავთ გასაჩერებელ ადგილზე. უბრალოდ, პარკინგდებით პრობლემების გარეშე!</p>	2015-06-05 07:35:58.905125	2015-06-05 07:35:58.905125
+2	<h3>ძვირია თუ არა პარკსერვისი?</h3>	<i></i>თავად განსაჯეთ:<p>თუ დღეში 2-ჯერ მაინც გჭირდებათ პარკირება, ეს იმას ნიშნავს რომ თავისუფალი ადილის ძებნაში დღეში 3-4 კმ-ს მაინც გადიხართ, დროსა და ნერვებზე რომ აღარაფერი ვთქვათ. ეს ყველაფერი თვეში დაახლოებით 30 ლარამდე გიჯდებათ. ან მეორე ვარიანტი, დროსა და ნერვებს უფრთხილდებით და ამჯობინებთ ტაქსით ისარგებლოთ. ეს კიდევ უფრო ძვირი სიამოვნებაა.</p><p>თუ ერთ თვიანი პაკეტის ღირებულებას საწვავის ხარჯს გამოვაკლებთ, დღეში ეს სერვისი დაახლოებით 1,50 ლარი გიჯდებათ.</p><p>არ ფიქრობთ, რომ ღირს ეს თანხა მიღებულ კომფორტად?</p>	2015-06-05 07:36:21.27203	2015-06-05 07:36:21.27203
+3	<h3>სად შემიძლია შევიძინო პარკსერვისი?</h3>	ამ ეტაპზე პარკსერვისის შეძენა შესაძლებელია TBC PAY-ს თვითმომსახურების ტერმინალებში. თუმცა მალე გააქტიურდება ჩვენი ვებ-გვერდიდან გადახდის საშუალება. სამომავლოდ კი გადახდების არხები კიდევ უფრო გაფართოვდება.	2015-06-05 07:36:43.920479	2015-06-05 07:36:43.920479
+4	<h3>სად ვრცელდება პარკსერვისის მომსახურების არეალი?</h3>	<p>პარკსერვისის მომსახურების არეალი ვრცელდება იქ, სადაც პარკირება პრობლემურია, ანუ თბილისის ყველა ცენტრალურ გამზირებსა და ქუჩებზე. სერვისის მიღების დროც</p><p>პარკირების პრობლემურ დროს - სამუშაო საათებში, 9:00-დან 18:00 საათამდე ხორციელდება. როგორც ქუჩების, ისე სამუშაო საათების არეალი მოთხოვნის შესაბამისად ეტაპობრივად გაფართოვდება.</p>	2015-06-05 07:36:58.772785	2015-06-05 07:36:58.772785
+5	<h3>პარკსერვისის შეძენისას მხოლოდ მანქანის ნომერი დავაფიქსირე და ჩემი ვინაობა არ მოუთხოვიათ. როგორ მოხდება ჩემი მომსახურება?</h3>	სერვისის მიღება ნებისმიერ პირს შეუძლია, ვინც იმ ავტომობილს მართავს, რომლისთვისაც მოხდა სერვისის პაკეტის შეძენა. ასე რომ, თუ ერთ ავტომობილს ოჯახის რამდენიმე წევრი მართავს ან სამსახურებრივად რამდენიმე პირი სარგებლობს, სერვისის მიღებას თითოეული მათგანი შეძლებს.	2015-06-05 07:37:18.687034	2015-06-05 07:37:18.687034
+6	<h3>ქალაქის ქუჩები ისედაც გადატვირთულია, თქვენ როგორ ახერხებთ სასურველი ადგილის მოძიებას?</h3>	როგორც იცით, სერვისის მისაღებად თქვენ 15-20 წუთით ადრე მაინც გვირეკავთ. ამის შემდეგ ჩვენი კომპანიის თანამშრომლები თქვენს მაგივრად ეძებენ და პოულობენ თავისუფალ ადგილებს, შემდეგ კი გელიან და გეხმარებიან მოძიებულ თავისუფალ ადგილზე პარკირებაში.	2015-06-05 07:37:32.35549	2015-06-05 07:37:32.35549
+7	<h3>რა მოხდება, თუ ზუსტ მისამართზე პარკირების თავისუფალი ადგილის მოძიება შეუძლებელი აღმოჩნდება?</h3>	გამონაკლის შემთხვევებში, როცა თქვენს მიერ დასახელებულ ზუსტ მისამართზე თავისუფალი პარკინგის ადგილის მოძიება შეუძლებელი იქნება, ადგილების მოძიებას ვახდენთ მიმდებარე ტერიტორიებზე ისე, რომ თქვენს სასურველ ადგილამდე 2 წუთის სავალ ადგილზე მოახერხოთ პარკირება. რაც უფრო ადრე დაგვირეკავთ სასურველ შეკვეთაზე, მით ნაკლებია იმის ალბათობა, რომ სასურველი ადგილის ნაცვლად ალტერნატიული ტერიტორიის შემოთავაზება მოგვიწიოს.	2015-06-05 07:37:45.89348	2015-06-05 07:37:45.89348
+\.
+
+
+--
+-- Name: faqs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('faqs_id_seq', 7, true);
+
+
+--
+-- Data for Name: hows; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY hows (id, title, content, created_at, updated_at) FROM stdin;
+1	3. ისიამოვნეთ პარკირებით	მშვიდად მიდიხართ დანიშნულების ადგილზე, სადაც&nbsp;&nbsp;გხვდებათ&nbsp;პარკსერვისის წარმომადგენელი და&nbsp;სათანადო დახმარებას გიწევთ ავტომობილის უპრობლემო პარკირებაში.<br>	2015-06-05 07:25:47.250944	2015-06-05 07:59:01.232813
+3	1. შემოგვიერთით	გაეცანით ჩვენს შემოთავაზებებს, აირჩიეთ სასურველი სერვისის პაკეტი და შეიძინეთ იგი&nbsp;ჩვენი ვებ გვერდის, TBC PAY-ს ან&nbsp;&nbsp;MultiPay-ს&nbsp;სწრაფი გადახდის აპარატების საშუალებით.<br>	2015-06-05 07:26:48.278602	2015-06-05 08:00:02.36455
+2	2. დაგვირეკეთ	დაუკავშირდით პარკსერვისის ცხელ ხაზს ავტომობილის&nbsp; პარკირებამდე მინიმუმ &nbsp;15 წუთით ადრე, შეატყობინეთ პარკირების&nbsp;სასურველი დრო, &nbsp;ადგილი და სხვა საჭირო ინფორმაცია.<br>	2015-06-05 07:26:11.62165	2015-06-05 07:52:04.961984
+\.
+
+
+--
+-- Name: hows_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('hows_id_seq', 3, true);
+
+
+--
+-- Data for Name: places; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY places (id, city, raion, address, workinghours, mintime, lat, lon, created_at, updated_at) FROM stdin;
+\.
+
+
+--
+-- Name: places_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('places_id_seq', 1, false);
+
+
+--
+-- Data for Name: rich_rich_files; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY rich_rich_files (id, created_at, updated_at, rich_file_file_name, rich_file_content_type, rich_file_file_size, rich_file_updated_at, owner_type, owner_id, uri_cache, simplified_type) FROM stdin;
+\.
+
+
+--
+-- Name: rich_rich_files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('rich_rich_files_id_seq', 1, false);
+
+
+--
+-- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY schema_migrations (version) FROM stdin;
+20150528065237
+20150522152401
+20150522135838
+20150527171516
+20150520161806
+20150519164732
+20150522135851
+20150519164731
+20150519164730
+20150518154011
+20150520164242
+20150525125621
+20150605065339
+\.
+
+
+--
+-- Data for Name: sliders; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY sliders (id, title, created_at, updated_at, image_file_name, image_content_type, image_file_size, image_updated_at) FROM stdin;
+1	woman in car	2015-06-05 08:04:37.669492	2015-06-05 08:04:37.669492	_1.jpg	image/jpeg	39134	2015-06-05 08:04:37.575569
+2	man	2015-06-05 08:05:03.953551	2015-06-05 08:05:03.953551	_2.jpg	image/jpeg	88974	2015-06-05 08:05:03.855357
+3	smyling couple	2015-06-05 08:05:30.147832	2015-06-05 08:05:30.147832	3.jpg	image/jpeg	45679	2015-06-05 08:05:30.080837
+4	woman in car	2015-06-05 08:05:46.712136	2015-06-05 08:05:46.712136	4.jpg	image/jpeg	59751	2015-06-05 08:05:46.63786
+\.
+
+
+--
+-- Name: sliders_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('sliders_id_seq', 4, true);
+
+
+--
+-- Data for Name: terms; Type: TABLE DATA; Schema: public; Owner: rails
+--
+
+COPY terms (id, content, created_at, updated_at) FROM stdin;
+1	<h3>ხელშეკრულება სერვისის მიწოდების შესახებ</h3><b>1. ხელშეკრულების საგანი</b><p>1.1. ამ პირობებზე დათანხმება ელექტრონული აქცეპტით (ვებ გვერდის ან თვითმომსახურების ტერმინალების საშუალებით გადახდის განხორციელებისას), ნიშნავს ამ ხელშეკრულების დადებას თქვენსა და სერვისის მომწოდებელს (კომპანიას) შორის;</p><p>1.2. მომსახურება გულისხმობს კომპანიის მიერ მითითებულ მისამართებზე თავისუფალი საპარკინგე ადგილების მოძიებას, თავისუფალი ადგილების შესახებ მომხმარებლისთვის ინფორმაციის მიწოდებას და თავისუფალ საპარკინგე ადგილებზე ავტოსატრანსპორტო საშუალების პარკირებაში დახმარების გაწევას;</p><p>1.3. მომსახურების მიწოდება ხორციელდება სხვადასხვა „სერვისის პაკეტის“ საშუალებით, რომელიც განსაზღვრავს მომსახურების ვადას, ღირებულებას, მისაღები სერვისების რაოდენობას, მომსახურების ადგილებსა (მისამართებს) და/ან სხვა დამატებით პირობებს. აღნიშნული სერვისის პაკეტების პირობები განთავსებულია კომპანიის ვებ-გვერდზე;</p><p>1.4. მომსახურების მიღება შესაძლებელია სერვისის პაკეტის ღირებულების გადახდისთანავე (გააქტიურებისთანავე), რაც გულისხმობს გადახდილი თანხის ასახვას სერვისის მომწოდებლის სისტემაში;</p><p>1.5. სერვისის პაკეტების შეძენა შესაძლოა მოხდეს ვებ გვერდის და/ან გადახდის აპარატების საშუალებით. ორივე შემთხვევაში მომხმარებელი ეთანხმება მომსახურების იმ პირობებს, რომელიც გადახდის მომენტისათვის აქტიური იყო კომპანიის ვებ გვერდზე <a target="_blank" href="http://www.parkservice.ge">www.parkservice.ge</a></p><p>1.6. სერვისის პაკეტში შესაძლებელია შევიდეს მესამე პირის მომსახურება/პროდუქტი, რომლის მიწოდების პირობებსაც განსაზღვრავს მხოლოდ აღნიშნული მომსახურების/პროდუქტის მომწოდებელი.</p><p></p><p><b>2. მომსახურების მიწოდების წესი:</b></p><p>2.1. მომსახურების ადგილები განსაზღვრულია წინასწარ და მოიცავს მუნიციპალურ, კერძო ან სხვა ტერიტორიებს. ყველა სიახლე ან ცვლილება მომსახურების ადგილებთან დაკავშირებით აისახება კომპანიის ვებ-გვერდზე: <a target="_blank" href="http://www.parkservice.ge">www.parkservice.ge</a>. მომხმარებლის მხრიდან მომსახურების მოთხოვნა ხდება სატელეფონო ცენტრის მეშვეობით. სატელეფონო ცენტრის ნომერი მითითებულია კომპანიის ვებ გვერდზე: <a target="_blank" href="http://www.parkservice.ge">www.parkservice.ge</a>.</p><p>2.2. მომსახურებას მიიღებს ნებისმიერი პირი, რომელიც მართავს სერვისის პაკეტის შეძენისას დაფიქსირებული სახელმწიფო ნომრის მქონე ავტოტრანსპორტს;</p><p>2.3. სტანდარტულად, მომსახურება განხორციელდება სამუშაო დღეებში, დილის 09:00 საათიდან საღამოს 18:00 საათამდე. ზოგიერთ ტერიტორიაზე მომსახურება შესაძლებელია მიწოდებული იქნას შედარებით ხანგრძლივი დროით ან/და უქმე/დასვენების დღეებშიც. ასეთი შემთხვევები აისახება კომპანიის ვებ გვერდზე.</p><p>2.4. სერვისის მომწოდებლის ვალდებულება - მომსახურება გაუწიოს მომხმარებელს, ამოქმედდება სერვისის პაკეტის ღირებულების გადახდის მომენტიდან;</p><p>2.5. სრულყოფილი და ხარისხიანი სერვისის მისაღებად მომხმარებელი ვალდებულია:</p><p>2.5.1. სერვისის პაკეტის ღირებულების გადახდამდე გაეცნოს მათ პირობებს და ამ ხელშეკრულებას;</p><p>2.5.2. ამ ხელშეკრულების პირობებზე თანხმობის შემთხვევაში გადაიხადოს შერჩეული სერვისის პაკეტის ღირებულება;</p><p>2.5.3. ორი ან რამდენიმე ავტოსატრანსპორტო საშუალებისათვის სერვისის პაკეტის შესყიდვა განახორციელოს თითოეულისათვის ცალკ-ცალკე;</p><p>2.5.4. მომსახურების მოთხოვნისას სერვისის მომწოდებელთან დააფიქსიროს ავტოტრანსპორტის სახელმწიფო ნომერი და საკუთარი მობილური ტელეფონის ნომერი უკუკავშირისთვის;</p><p>2.5.5. მომსახურების ყოველი კონკრეტული მომენტისათვის მომსახურების ადგილები/მისამართები შეამოწმოს კომპანიის ვებ გვერდზე;</p><p>2.5.6. სერვისის მომწოდებელთან დაფიქსირებული მობილურის ნომერი ჰქონდეს ჩართული და უპასუხოს სერვისის მომწოდებლის ზარს;</p><p>2.5.7. დროის დათქმულ მონაკვეთში მივიდეს მომსახურების მისამართზე. თუ მომხმარებელი დათქმულ დროს არ მივა მომსახურების მისამართზე, სერვისის მომწოდებელი იტოვებს უფლებას გააუქმოს მოთხოვნა. თუ მომხმარებელი დაგვიანებით მივა მომსახურების მისამართზე და ითხოვს დახმარებას, ეს თხოვნა სერვისის მომწოდებლის მხრიდან განხილული იქნება როგორც ახალი შეკვეთა და დახმარების გაწევა მოხდება დათქმული ვადების დაცვით.</p><p>2.6. სერვისის მიღების პროცედურა:</p><p>2.6.1. მომხმარებელი სერვისის მომწოდებელს უკავშირდება კომპანიის ვებ-გვერდზე მითითებულ ტელეფონის ნომერზე, სასურველ ადგილზე პარკირებამდე არანაკლებ ოცი წუთით ადრე და ატყობინებს სასურველი პარკინგის ადგილს, დროს და ავტოტრანსპორტის სახელმწიფო ნომერს;</p><p>2.6.2. თუ კონკრეტულ ავტოსატრანსპორტო საშუალებაზე ფიქსირდება აქტიური სერვისის პაკეტი და მომსახურების მოთხოვნილი ტერიტორია შედის მომსახურების ზონაში, მომხმარებელს გაეწევა შესაბამისი მომსახურება მოთხოვნილ ან მიმდებარე ტერიტორიაზე;</p><p>2.6.3. მომსახურება გავრცელდება იმ ავტოსატრანსპორტო საშუალებაზე, რომლის სახელმწიფო ნომერიც დაფიქსირდება მომხმარებლის მიერ სერვისის პაკეტის შეძენისას;</p><p>2.6.4. მომსახურების გაწევა მოხდება შესყიდული სერვისის პაკეტის მოქმედების ვადაში, თუ ამოწურული არ არის სერვისის პაკეტით განსაზღვრული მომსახურებების რაოდენობა.</p><p>2.6.5. ავტოსატრანსპორტო საშუალების სახელმწიფო ნომრის და მობილური ტელეფონის ნომრის სწორად დაფიქსირებაზე პასუხისმგებელია მომხმარებელი;</p><p>2.6.6. მომხმარებელს შეუძლია შეამოწმოს საკუთარი ავტოსატრანსპორტო საშუალებისათვის შეძენილი სერვის პაკეტის მოქმედების ვადა ნებისმიერ დროს სერვისის მომწოდებლის სატელეფონო ცენტრში. ვებ-გვერდზე აღნიშნული ინფორმაციის მიღება არ საჭიროებს დამატებით ავტორიზაციას და ხელმისაწვდომია მხოლოდ შესაბამის გრაფაში ავტოტრანსპორტის სახელმწიფო ნომრის დაფიქსირებით. მომხმარებელი აცხადებს, რომ აღნიშნული ინფორმაციის საჯაროობის გამო მას არ გააჩნია პრეტენზია სერვისის მომწოდებელთან.</p><p></p><p><b>3. სერვისის მომწოდებლის უფლებები და პასუხისმგებლობა</b></p><p></p><p>3.1. სერვისის მომწოდებელი პასუხისმგებელია:</p><p>ა) მომხმარებლისთვის ინფორმაციის დროულად და ამომწურავად მიწოდებაზე;</p><p>ბ) მომსახურებაში ჩართული ყოველი თანამშრომლის ოპერატიულ და ეთიკური ქმედებაზე;</p><p>გ) მომხმარებლების მიერ დაფიქსირებული პრეტენზიების განხილვაზე ამგვარი ფაქტის დაფიქსირებიდან ერთი თვის ვადაში.</p><p></p><p>3.2. სერვისის მომწოდებელი უფლებამოსილია:</p><p>ა) პერიოდულად შეცვალოს მომსახურების პირობები და პარკირების ადგილები/მისამართები და სერვისის პაკეტების ღირებულება, რის შესახებაც ცვლილებები განათავსოს საკუთარ ვებ გვერდზე;</p><p>ბ) საკუთარი შეხედულებით შეცვალოს სერვისის პაკეტის შემადგენლობაში შეთავაზებული სერვისები, გააუქმოს ან დაამატოს ესა თუ ის სერვისის პაკეტი, რის შესახებაც ცვლილებები განათავსოს საკუთარ ვებ გვერდზე;</p><p>3.3. სერვისის მომწოდებელი ვალდებულია:</p><p>ა) შეცვლილი პირობები აამოქმედოს მოხმარებლის მიერ ახალი სერვისის პაკეტის შეძენის (გადახდის გააქტიურების) შემთხვევაში;</p><p>ბ) უკვე გაყიდული სერვისის პაკეტის მოქმედების ვადაში იხელმძღვანელოს იმ ფასებით და პირობებით, რაც დათქმული და შერჩეული იყო მომხმარებლის მიერ აღნიშნული სერვისის პაკეტის ღირებულების გადახდის მომენტში;</p><p></p><p>3.4. სერვისის მომწოდებელი თავისუფალია პასუხისმგებლობისგან:</p><p>ა) თუ ხელშეკრულება დადებულია, მაგრამ სერვისის სახე არ არჩეულა ან/და თანხა არ გადახდილა;</p><p>ბ) ისეთ საკითხებზე, რომლებიც ეხება: ავტოტრანსპორტის კუთვნილებას, პარკირების უფლების ნამდვილობას (სითი პარკის გადასახადი), პარკირების წესის დარღვევით გამოწვეულ ჯარიმებს, ან/და სხვა პირთა მიერ მოთხოვნილ გადასახდელებს;</p><p>გ) მომსახურების გაუწევლობისთვის ან დაბალი ხარისხის მომსახურების გაწევისათვის, თუ ვითარება ვერ კონტროლდება მისგან დამოუკიდებელი მიზეზით (გადაკეტილია ქუჩა/ტერიტორია სარემონტო სამუშაოების ან სპეციალური ღონისძიების გამო, შეიცვალა კანონი/კანონქვემდებარე აქტი, რაც არსებითად ცვლის ამ ხელშეკრულებით განსაზღვრული მომსახურების პირობებს და მსგავსი გარემოებანი);</p><p>დ) თუ მომხმარებელმა დაარღვია სერვისის მიღების პროცედურები და ამ ხელშეკრულებით ნაკისრი საკუთარი ვალდებულებები (პ.პ.2.5-2.6).</p><p></p><p><b>4. ზოგადი პირობები:</b></p><p>ეს ხელშეკრულება დადებულად ჩაითვლება მასზე ელექტრონულად დათანხმების თარიღიდან. მისი დადების ადგილია თბილისი, საქართველო; ხელშეკრულება ექვემდებარება საქართველოს მოქმედ კანონმდებლობას და სადავო საკითხები განიხილება საქართველოს საერთო იურისდიქციის სასამართლოში საქართველოს კანონმდებლობით დადგენილი წესით ხელშეკრულების დადების ადგილის მიხედვით.</p><p></p><h3>გისურვებთ უპრობლემო პარკინგს!</h3>	2015-06-05 07:29:41.831695	2015-06-05 07:29:41.831695
+\.
+
+
+--
+-- Name: terms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: rails
+--
+
+SELECT pg_catalog.setval('terms_id_seq', 1, true);
+
+
+--
+-- Name: abouts_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY abouts
+    ADD CONSTRAINT abouts_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: active_admin_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY active_admin_comments
+    ADD CONSTRAINT active_admin_comments_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: contacts_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY contacts
+    ADD CONSTRAINT contacts_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: faqs_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY faqs
+    ADD CONSTRAINT faqs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: hows_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY hows
+    ADD CONSTRAINT hows_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: places_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY places
+    ADD CONSTRAINT places_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: rich_rich_files_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY rich_rich_files
+    ADD CONSTRAINT rich_rich_files_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: sliders_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY sliders
+    ADD CONSTRAINT sliders_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: terms_pkey; Type: CONSTRAINT; Schema: public; Owner: rails; Tablespace: 
+--
+
+ALTER TABLE ONLY terms
+    ADD CONSTRAINT terms_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: index_active_admin_comments_on_author_type_and_author_id; Type: INDEX; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE INDEX index_active_admin_comments_on_author_type_and_author_id ON active_admin_comments USING btree (author_type, author_id);
+
+
+--
+-- Name: index_active_admin_comments_on_namespace; Type: INDEX; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE INDEX index_active_admin_comments_on_namespace ON active_admin_comments USING btree (namespace);
+
+
+--
+-- Name: index_active_admin_comments_on_resource_type_and_resource_id; Type: INDEX; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE INDEX index_active_admin_comments_on_resource_type_and_resource_id ON active_admin_comments USING btree (resource_type, resource_id);
+
+
+--
+-- Name: unique_schema_migrations; Type: INDEX; Schema: public; Owner: rails; Tablespace: 
+--
+
+CREATE UNIQUE INDEX unique_schema_migrations ON schema_migrations USING btree (version);
+
+
+--
+-- Name: public; Type: ACL; Schema: -; Owner: postgres
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- PostgreSQL database dump complete
+--
+

@@ -10,16 +10,16 @@ br
 .row
   .span12
     #contact-form
-      form
+      form action="/send_mail" method="POST"
         fieldset
           label
             | თქვენი სახელი
-          input.input-xlarge[type="text"]
+          input.input-xlarge type="text" name="name" 
           label
             | თქვენი ელექტრონული ფოსტა
-          input.input-xlarge[type="text"]
+          input.input-xlarge type="text" name="mail" 
           label
             | შეტყობინება 
-          textarea.input-xxlarge[rows="6"]
-        button.btn.orange-button[type="submit"]
+          textarea.input-xxlarge rows="6" name="message" 
+        button.btn.orange-button type="submit" 
           | გაგზავნა

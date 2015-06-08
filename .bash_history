@@ -261,3 +261,233 @@ sudo service unicorn restart
 vim app/controllers/how_controller.rb 
 sudo service unicorn restart
 exit
+vim public/css/style.css 
+ls db/migrate/
+vim db/migrate/20150518154011_create_abouts.rb
+vim db/migrate/20150522135838_create_sliders.rb
+vim app/models/slider.rb 
+vim app/models/about.rb 
+vim app/admin/slider.rb 
+vim app/admin/about.rb 
+vim app/views/about/
+vim app/views/about/index.html.slim 
+vim app/views/home/index.html.slim 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim db/migrate/20150522135838_create_sliders.rb
+vim 20150522135851_add_attachment_image_to_sliders.rb
+vim db/migrate/20150522135851_add_attachment_image_to_sliders.rb
+vim db/migrate/20150522135851_add_attachment_image_to_sliders.rb
+rails generate paperclip About image
+cp db/migrate/20150522135851_add_attachment_image_to_sliders.rb db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+vim db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+rake db:migrate
+rake db:migrate --trace
+vim db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+rake db:migrate --trace
+vim db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+rails generate paperclip about avatar
+vim db/migrate/20150524135857_add_attachment_image_to_abouts.rb
+vim db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+vim db/migrate/20150518154011_create_abouts.rb
+vim db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+ls db/migrate/
+vim db/migrate/20150605065339_add_attachment_image_to_abouts.rb
+vim db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+rm db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+vim db/migrate/20150605065339_add_attachment_image_to_abouts.rb
+rake db:migrate --trace
+vim /var/log/unicorn/unicorn.log 
+vim app/admin/slider.rb 
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim app/models/about.rb 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+ls db/migrate/
+vim db/migrate/20150605065339_add_attachment_image_to_abouts.rb
+vim db/migrate/20150519164730_create_rich_rich_images.rich.rb
+vim db/migrate/20150522135838_create_sliders.rb
+vim db/migrate/20150522135851_add_attachment_image_to_sliders.rb
+vim db/migrate/20150605065339_add_attachment_image_to_abouts.rb 
+rake db:migrate
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+rake db:schema:load
+sudo service unicorn restart
+rails c
+vim app/views/about/index.html.slim 
+sudo service unicorn restart
+vim app/models/about.rb 
+sudo service unicorn restart
+rake db:seed
+vim app/views/about/index.html.slim 
+sudo service unicorn restart
+vim app/views/how/index.html.slim 
+vim app/controllers/how/index.html.slim 
+vim app/controllers/how_controller.rb 
+sudo service unicorn restart
+vim app/controllers/faq_controller.rb 
+sudo service unicorn restart
+git add .
+git status
+git add .
+git add . --ingore-removal
+git add .
+git commit -m 'last'
+git push origin master
+git status
+git commit -a
+psql
+psql app_production < infile
+psql app_production < ~/infile
+touch infile
+psql app_production < infile
+vim infile 
+pg_dump app_production > infile
+vim infile 
+rails generate mailer UserMailer
+vim app/mailers/user_mailer.rb 
+vim app/mailers/application_mailer.rb 
+vim app/mailers/application_mailer.rb 
+vim app/mailers/user_mailer.rb 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim app/views/contact/index.html.slim 
+vim /var/log/unicorn/unicorn.log 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim app/mailers/user_mailer.rb 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim app/views/contact/index.html.slim 
+sudo service unicorn restart
+vim app/controllers/contact_controller.rb 
+sudo service unicorn restart
+vim app/controllers/contact_controller.rb 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim app/controllers/contact_controller.rb 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+mv app/views/user_mailer/send_email.html.erb  app/views/user_mailer/send_mail.html.erb
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim app/mailers/application_mailer.rb 
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove
+sudo apt-get -y install exim4
+sudo dpkg-reconfigure exim4-config
+sudo apt-get install sendmail
+sudo apt-get install sendmail
+sudo apt-get install sendmail
+sudo apt-get install sendmail
+sudo apt-get install sendmail
+sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove
+sudo apt-get install sendmail
+sudo apt-get remove exim4
+sudo apt-get install sendmail
+nano /etc/hosts
+sudo sendmailconfig
+time echo testmail | sendmail zaali@live.com
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+create mode 100644 app/views/user_mailer/send_mail.html.erb 
+mv app/views/user_mailer/send_mail.html.erb app/views/user_mailer/send_mail.text.erb
+sudo service unicorn restart
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim /var/log/unicorn/unicorn.log 
+vim app/controllers/contact_controller.rb 
+sudo service unicorn restart
+mv app/views/user_mailer/send_mail.text.erb app/views/user_mailer/send_mail.html.erb
+sudo service unicorn restart
+vim app/views/user_mailer/send_mail.html.erb 
+sudo service unicorn restart
+vim app/mailers/user_mailer.rb 
+vim app/mailers/application_mailer.rb 
+sudo service unicorn restart
+ls
+psql
+vim app/views/pricing/index.html.slim 
+sudo service unicorn restart
+vim public/css/style.css 
+vim app/views/home/index.html.slim 
+sudo service unicorn restart
+vim public/css/style.css 
+vim app/views/how/index.html.slim 
+sudo service unicorn restart
+vim app/views/layouts/application.html.slim 
+vim app/views/term/index.html.slim 
+sudo service unicorn restart
+vim app/mailers/application_mailer.rb 
+vim app/mailers/user_mailer.rb 
+sudo service unicorn restart
+vim app/mailers/user_mailer.rb 
+vim app/assets/javascripts/map.js 
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+sudo service unicorn restart
+rake assets:precompile
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+sudo service unicorn restart
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+clear
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+vim app/assets/javascripts/map.js 
+rake assets:precompile --trace
+sudo service unicorn restart
+ls public/
+mv public/index.html public/construction.html
+exit
+vim app/views/layouts/application.html.slim 
+sudo service unicorn restart
+vim app/views/pricing/index.html.slim 
+sudo service unicorn restart
+exit
+vim app/views/map/index.html.slim 
+sudo service unicorn restart
+vim app/views/layouts/application.html.slim 
+sudo service unicorn restart
+exit

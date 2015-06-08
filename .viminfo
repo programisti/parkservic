@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/social
+~MSle0~/setMarker
 
 # Last Substitute String:
 $
@@ -16,6 +16,14 @@ $
 # Command Line History (newest to oldest):
 :x
 :w
+:e app/mailers/user_mailer.rb
+:e config/routes.rb
+:e app/controllers/contact_controller.rb
+:e /var/log/unicorn/unicorn.log
+:e app/controllers/
+:e app/views/user_mailer/send_email.html.erb
+:e app/views/user_mailer/
+:e app/views/contact/index.html.slim
 :e app/views/about/index.html.slim
 :წ
 :ხ
@@ -30,6 +38,15 @@ $
 :w!
 
 # Search String History (newest to oldest):
+?/setMarker
+?/center
+?/title
+?/entry-title
+?/qweqweqwe
+?/mailer
+?/send
+?/INSERT
+?/insert
 ?/social
 ?/.ptable h3
 ?/underline
@@ -51,113 +68,117 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	LINE	0
-	  validates :content, presence: true
-"1	LINE	0
-	    - @about.image
+"0	CHAR	0
+	წუთი
+""1	LINE	0
+	</script>
 "2	LINE	0
-	Started GET "/admin/abouts/1" for 176.73.27.80 at 2015-06-05 03:14:17 -0400
-	Processing by Admin::AboutsController#show as HTML
-	  Parameters: {"id"=>"1"}
-	  [1m[36mAbout Load (0.5ms)[0m  [1mSELECT  "abouts".* FROM "abouts" WHERE "abouts"."id" = $1 LIMIT 1[0m  [["id", 1]]
-	  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/activeadmin-1.0.0.pre1/app/views/active_admin/resource/show.html.arb (26.3ms)
-	Completed 200 OK in 56ms (Views: 29.1ms | ActiveRecord: 5.9ms)
-	Started GET "/images/thumb/missing.png" for 176.73.27.80 at 2015-06-05 03:14:17 -0400
-	
-	ActionController::RoutingError (No route matches [GET] "/images/thumb/missing.png"):
-	  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
-	  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
-	  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
-	  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
-	  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
-	  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-	  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
-	  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
-	  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
-	  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
-	  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
-	  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-	  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
-	  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
-	  railties (4.2.1) lib/rails/engine.rb:518:in `call'
-	  railties (4.2.1) lib/rails/application.rb:164:in `call'
-	  unicorn (4.9.0) lib/unicorn/http_server.rb:580:in `process_client'
-	  unicorn (4.9.0) lib/unicorn/http_server.rb:674:in `worker_loop'
-	  unicorn (4.9.0) lib/unicorn/http_server.rb:529:in `spawn_missing_workers'
-	  unicorn (4.9.0) lib/unicorn/http_server.rb:140:in `start'
-	  unicorn (4.9.0) bin/unicorn:126:in `<top (required)>'
-	  /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `load'
-	  /usr/local/rvm/gems/ruby-2.2.1/bin/unicorn:23:in `<main>'
-	  /usr/local/rvm/gems/ruby-2.2.1@global/bin/ruby_executable_hooks:15:in `eval'
-	  /usr/local/rvm/gems/ruby-2.2.1@global/bin/ruby_executable_hooks:15:in `<main>'
-	
-	
-	Started GET "/admin/abouts/1/edit" for 176.73.27.80 at 2015-06-05 03:14:19 -0400
-	Processing by Admin::AboutsController#edit as HTML
-	  Parameters: {"id"=>"1"}
-	  [1m[35mAbout Load (0.4ms)[0m  SELECT  "abouts".* FROM "abouts" WHERE "abouts"."id" = $1 LIMIT 1  [["id", 1]]
-	  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "abouts".* FROM "abouts" WHERE "abouts"."id" = $1 LIMIT 1[0m  [["id", "1"]]
-	  Rendered /usr/local/rvm/gems/ruby-2.2.1/gems/activeadmin-1.0.0.pre1/app/views/active_admin/resource/edit.html.arb (47.9ms)
-	Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.4ms)
+	<script>
 "3	LINE	0
-	  validates :, presence: true
+	    center: new google.maps.LatLng(41.721223, 44.775080)
 "4	LINE	0
-	  validates :, presence: true
+	    map.setZoom(9);
 "5	LINE	0
-	  form do |f|
-	    f.inputs "Slider Details" do
-	      f.input :title
-	      f.input :image, :as => :file
-	    end
-	    
-	    f.actions
-	  end
+	  map.setCenter(new google.maps.LatLng(41.721223, 44.775080));
+	  map.setZoom(9);
 "6	LINE	0
-	  form do |f|
-	    f.inputs "Slider Details" do
-	      f.input :title
-	      f.input :image, :as => :file
-	    end
-	    
-	    f.actions
-	  end
+	  var center = new google.maps.LatLng(41.721223, 44.775080);
 "7	LINE	0
-	
-	
+	  var center = new google.maps.LatLng(41.721223, 44.775080);
 "8	LINE	0
-	
-"9	LINE	0
-	  permit_params :title, :image
-""-	CHAR	0
-	DESC
+	    center: center 
+"9	CHAR	0
+	)
+	  };
+"-	CHAR	0
+	 
 
 # File marks:
-'0  3  27  ~/app/controllers/faq_controller.rb
-'1  3  28  ~/app/controllers/how_controller.rb
-'2  1  0  app/controllers/how/index.html.slim
-'3  5  0  ~/app/views/how/index.html.slim
-'4  12  4  ~/app/views/about/index.html.slim
-'5  4  57  ~/app/models/about.rb
-'6  13  4  ~/app/views/about/index.html.slim
-'7  7  0  /var/log/unicorn/unicorn.log
-'8  1  0  /var/log/unicorn/unicorn.log
-'9  1  0  ~/db/migrate/20150605065339_add_attachment_image_to_abouts.rb
+'0  104  0  ~/app/views/layouts/application.html.slim
+'1  57  217  ~/app/views/map/index.html.slim
+'2  49  41  ~/app/views/pricing/index.html.slim
+'3  34  24  ~/app/views/layouts/application.html.slim
+'4  27  19  ~/app/assets/javascripts/map.js
+'5  62  14  ~/app/assets/javascripts/map.js
+'6  62  61  ~/app/assets/javascripts/map.js
+'7  62  0  ~/app/assets/javascripts/map.js
+'8  26  2  ~/app/assets/javascripts/map.js
+'9  29  4  ~/app/assets/javascripts/map.js
 
 # Jumplist (newest first):
+-'  104  0  ~/app/views/layouts/application.html.slim
+-'  1  0  ~/app/views/layouts/application.html.slim
+-'  57  217  ~/app/views/map/index.html.slim
+-'  3  0  ~/app/views/map/index.html.slim
+-'  1  0  ~/app/views/map/index.html.slim
+-'  49  41  ~/app/views/pricing/index.html.slim
+-'  2  0  ~/app/views/pricing/index.html.slim
+-'  1  0  ~/app/views/pricing/index.html.slim
+-'  34  24  ~/app/views/layouts/application.html.slim
+-'  27  19  ~/app/assets/javascripts/map.js
+-'  1  0  ~/app/assets/javascripts/map.js
+-'  62  14  ~/app/assets/javascripts/map.js
+-'  26  2  ~/app/assets/javascripts/map.js
+-'  29  4  ~/app/assets/javascripts/map.js
+-'  36  2  ~/app/assets/javascripts/map.js
+-'  35  2  ~/app/assets/javascripts/map.js
+-'  37  0  ~/app/assets/javascripts/map.js
+-'  28  23  ~/app/assets/javascripts/map.js
+-'  1  0  ~/app/mailers/user_mailer.rb
+-'  2  0  ~/app/mailers/user_mailer.rb
+-'  2  38  ~/app/mailers/application_mailer.rb
+-'  1  0  ~/app/mailers/application_mailer.rb
+-'  4  32  ~/app/views/term/index.html.slim
+-'  1  0  ~/app/views/term/index.html.slim
+-'  89  48  ~/app/views/layouts/application.html.slim
+-'  19  66  ~/app/views/how/index.html.slim
+-'  1  0  ~/app/views/how/index.html.slim
+-'  1159  14  ~/public/css/style.css
+-'  1  0  ~/public/css/style.css
+-'  11  56  ~/app/views/home/index.html.slim
+-'  1  0  ~/app/views/home/index.html.slim
+-'  1167  11  ~/public/css/style.css
+-'  51  67  ~/app/views/pricing/index.html.slim
+-'  3  0  ~/app/mailers/user_mailer.rb
+-'  9  6  ~/app/views/user_mailer/send_mail.html.erb
+-'  1  0  ~/app/views/user_mailer/send_mail.html.erb
+-'  18  17  ~/app/controllers/contact_controller.rb
+-'  1  0  ~/app/controllers/contact_controller.rb
+-'  144  0  /var/log/unicorn/unicorn.log
+-'  1  0  /var/log/unicorn/unicorn.log
+-'  2  68  ~/app/controllers/contact_controller.rb
+-'  16  3  ~/app/controllers/contact_controller.rb
+-'  19  2  ~/app/controllers/contact_controller.rb
+-'  12  40  ~/config/routes.rb
+-'  8  17  ~/app/controllers/contact_controller.rb
+-'  14  8  ~/app/views/contact/index.html.slim
+-'  1  0  ~/app/views/contact/index.html.slim
+-'  8  21  ~/app/mailers/user_mailer.rb
+-'  13  28  ~/app/views/contact/index.html.slim
+-'  17  19  ~/app/views/contact/index.html.slim
+-'  10  18  ~/app/views/user_mailer/send_email.html.erb
+-'  9  12  ~/app/mailers/user_mailer.rb
+-'  23  48  ~/app/views/contact/index.html.slim
+-'  11  0  ~/app/controllers/contact_controller.rb
+-'  13  5  ~/config/routes.rb
+-'  5  16  ~/app/mailers/user_mailer.rb
+-'  9  0  ~/app/views/user_mailer/send_email.html.erb
+-'  6  2  ~/app/views/user_mailer/send_email.html.erb
+-'  13  0  ~/app/views/user_mailer/send_email.html.erb
+-'  11  0  ~/app/mailers/user_mailer.rb
+-'  605  0  ~/infile
+-'  1  0  ~/infile
 -'  3  27  ~/app/controllers/faq_controller.rb
 -'  1  0  ~/app/controllers/faq_controller.rb
 -'  3  28  ~/app/controllers/how_controller.rb
 -'  1  0  ~/app/controllers/how_controller.rb
 -'  1  0  app/controllers/how/index.html.slim
 -'  5  0  ~/app/views/how/index.html.slim
--'  1  0  ~/app/views/how/index.html.slim
 -'  12  4  ~/app/views/about/index.html.slim
 -'  1  0  ~/app/views/about/index.html.slim
 -'  4  57  ~/app/models/about.rb
 -'  1  0  ~/app/models/about.rb
 -'  13  4  ~/app/views/about/index.html.slim
--'  7  0  /var/log/unicorn/unicorn.log
--'  1  0  /var/log/unicorn/unicorn.log
 -'  1  0  ~/db/migrate/20150605065339_add_attachment_image_to_abouts.rb
 -'  1  0  ~/db/migrate/20150522135851_add_attachment_image_to_sliders.rb
 -'  2  2  ~/db/migrate/20150522135838_create_sliders.rb
@@ -176,196 +197,45 @@ $
 -'  1  0  ~/20150522135851_add_attachment_image_to_sliders.rb
 -'  6  0  ~/db/migrate/20150522135838_create_sliders.rb
 -'  8  10  ~/app/views/home/index.html.slim
--'  1  0  ~/app/views/home/index.html.slim
 -'  1  0  ~/app/views/about
 -'  23  2  ~/app/admin/about.rb
 -'  1  0  ~/app/admin/about.rb
 -'  4  0  ~/app/admin/slider.rb
 -'  2  0  ~/app/models/slider.rb
 -'  1  0  ~/app/models/slider.rb
--'  4  5  ~/db/migrate/20150518154011_create_abouts.rb
--'  810  2  ~/public/css/style.css
--'  1  0  ~/public/css/style.css
--'  8  33  ~/app/views/contact/index.html.slim
--'  1  0  ~/app/views/contact/index.html.slim
--'  8  30  ~/app/views/pricing/index.html.slim
--'  1  0  ~/app/views/pricing/index.html.slim
--'  84  8  ~/app/views/pricing/index.html.slim
--'  82  8  ~/app/views/pricing/index.html.slim
--'  78  177  ~/app/views/pricing/index.html.slim
--'  77  8  ~/app/views/pricing/index.html.slim
--'  80  8  ~/app/views/pricing/index.html.slim
--'  43  69  ~/app/views/pricing/index.html.slim
--'  22  69  ~/app/views/pricing/index.html.slim
--'  23  18  ~/app/views/pricing/index.html.slim
--'  49  16  ~/app/views/pricing/index.html.slim
--'  34  19  ~/app/views/pricing/index.html.slim
--'  17  4  ~/app/views/how/index.html.slim
--'  1301  59  ~/public/css/style.css
--'  220  0  ~/public/css/bootstrap.css
--'  2414  19  ~/public/css/bootstrap.css
--'  164  2  ~/public/css/bootstrap.css
--'  2913  31  ~/public/css/bootstrap.css
--'  2869  22  ~/public/css/bootstrap.css
--'  2862  22  ~/public/css/bootstrap.css
--'  2854  33  ~/public/css/bootstrap.css
--'  2848  26  ~/public/css/bootstrap.css
--'  2805  29  ~/public/css/bootstrap.css
--'  2769  23  ~/public/css/bootstrap.css
--'  2751  22  ~/public/css/bootstrap.css
--'  2746  17  ~/public/css/bootstrap.css
--'  2685  22  ~/public/css/bootstrap.css
--'  2648  12  ~/public/css/bootstrap.css
--'  636  0  ~/public/css/bootstrap.css
--'  626  0  ~/public/css/bootstrap.css
--'  613  0  ~/public/css/bootstrap.css
--'  201  2  ~/public/css/bootstrap.css
--'  196  2  ~/public/css/bootstrap.css
--'  4309  14  ~/public/css/bootstrap.css
--'  663  0  ~/public/css/bootstrap.css
--'  646  14  ~/public/css/bootstrap.css
--'  1  0  ~/public/css/bootstrap.css
--'  70  2  ~/public/css/main.css
--'  1  0  ~/public/css/main.css
--'  69  0  ~/public/css/main.css
--'  637  15  ~/public/css/bootstrap.css
--'  13  14  ~/app/views/faq/index.html.slim
--'  1  0  ~/app/views/faq/index.html.slim
--'  2  0  ~/app/models/faq.rb
--'  1  0  ~/app/models/faq.rb
--'  7  28  ~/app/views/term/index.html.slim
--'  1  0  ~/app/views/term/index.html.slim
--'  6  0  ~/app/views/term/index.html.slim
--'  10  36  ~/app/views/map/index.html.slim
--'  1  0  ~/app/admin/slider.rb
--'  1  0  ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
--'  4  24  ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
--'  3  0  ~/db/migrate/20150518154011_create_abouts.rb
 
 # History of marks within files (newest to oldest):
 
-> ~/app/controllers/faq_controller.rb
-	"	3	27
-	^	3	28
-	.	3	27
-	+	3	27
-
-> ~/app/controllers/how_controller.rb
-	"	3	28
-	^	3	29
-	.	3	28
-	+	3	28
-
-> app/controllers/how/index.html.slim
-	"	1	0
-
-> ~/app/views/how/index.html.slim
-	"	5	0
-	.	17	0
-	+	17	0
-
-> ~/app/views/about/index.html.slim
-	"	12	4
-	^	11	9
-	.	12	0
-	+	8	22
-	+	9	7
-	+	8	16
-	+	4	58
-	+	12	9
-	+	13	17
-	+	13	0
-	+	11	8
-	+	12	0
-
-> ~/app/models/about.rb
-	"	4	57
-	^	3	32
-	.	4	57
-	+	4	0
-	+	4	0
+> ~/app/views/layouts/application.html.slim
+	"	104	0
+	.	105	0
 	+	3	0
-	+	4	57
+	+	35	34
+	+	40	0
+	+	46	0
+	+	35	35
+	+	36	0
+	+	35	0
+	+	89	48
+	+	34	24
+	+	105	0
+	+	97	0
+	+	105	0
+	j	1	0
 
-> /var/log/unicorn/unicorn.log
-	"	7	0
-	.	1	0
-	+	1	0
-
-> ~/db/migrate/20150605065339_add_attachment_image_to_abouts.rb
-	"	1	0
-
-> ~/db/migrate/20150522135851_add_attachment_image_to_sliders.rb
-	"	1	0
-
-> ~/db/migrate/20150522135838_create_sliders.rb
-	"	2	2
-
-> ~/db/migrate/20150519164730_create_rich_rich_images.rich.rb
-	"	1	0
-
-> ~/app/admin/slider.rb
-	"	1	0
-
-> ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
-	"	1	0
-	^	1	32
-	.	1	31
-	+	3	23
-	+	9	28
-	+	1	31
-
-> ~/db/migrate/20150518154011_create_abouts.rb
-	"	3	0
-
-> ~/db/migrate/20150524135857_add_attachment_image_to_abouts.rb
-	"	1	0
-
-> ~/20150522135851_add_attachment_image_to_sliders.rb
-	"	1	0
-
-> ~/app/views/home/index.html.slim
-	"	8	10
-
-> ~/app/admin/about.rb
-	"	23	2
-	^	23	3
-	.	23	0
-	+	13	0
-	+	13	0
-	+	3	31
-	+	8	33
-	+	13	0
-	+	13	0
-	+	23	0
-	+	16	17
-	+	23	0
-
-> ~/app/models/slider.rb
-	"	2	0
-
-> ~/public/css/style.css
-	"	810	2
-	^	810	17
-	.	810	0
-	+	19	22
-	+	1301	59
-	+	810	0
-
-> ~/app/views/contact/index.html.slim
-	"	8	33
-	^	8	34
-	.	8	33
-	+	16	32
-	+	19	32
-	+	22	44
-	+	4	29
-	+	8	33
+> ~/app/views/map/index.html.slim
+	"	57	217
+	^	57	253
+	.	57	217
+	+	10	36
+	+	57	390
+	+	57	0
+	+	57	217
 
 > ~/app/views/pricing/index.html.slim
-	"	8	30
-	^	8	33
-	.	8	30
+	"	49	41
+	^	69	19
+	.	69	18
 	+	28	0
 	+	34	30
 	+	24	0
@@ -419,6 +289,321 @@ $
 	+	82	0
 	+	84	0
 	+	8	30
+	+	30	67
+	+	51	67
+	+	69	18
+
+> ~/app/assets/javascripts/map.js
+	"	27	19
+	^	59	8
+	.	28	23
+	+	29	112
+	+	27	0
+	+	26	44
+	+	29	58
+	+	28	24
+	+	29	58
+	+	28	23
+	+	26	44
+	+	47	27
+	+	35	15
+	+	35	59
+	+	35	0
+	+	35	0
+	+	35	0
+	+	35	39
+	+	35	59
+	+	35	59
+	+	33	0
+	+	29	0
+	+	28	24
+	+	33	0
+	+	35	0
+	+	35	2
+	+	36	0
+	+	27	59
+	+	29	21
+	+	32	0
+	+	29	17
+	+	27	11
+	+	29	55
+	+	27	0
+	+	62	0
+	+	61	0
+	+	62	0
+	+	62	59
+	+	62	0
+	+	62	61
+	+	62	0
+	+	59	8
+	+	60	0
+	+	29	0
+	+	28	23
+
+> ~/app/mailers/user_mailer.rb
+	"	1	0
+	^	5	6
+	.	2	0
+	+	2	0
+	+	10	0
+	+	2	33
+	+	9	13
+	+	9	0
+	+	2	9
+	+	9	12
+	+	5	14
+	+	3	58
+	+	9	19
+	+	5	25
+	+	6	15
+	+	5	34
+	+	6	15
+	+	9	19
+	+	8	21
+	+	3	0
+	+	2	0
+	+	3	26
+	+	2	0
+	+	3	0
+	+	2	0
+	+	2	0
+
+> ~/app/mailers/application_mailer.rb
+	"	2	38
+	^	2	38
+	.	2	38
+	+	2	11
+	+	3	0
+	+	2	38
+
+> ~/app/views/term/index.html.slim
+	"	4	32
+	^	7	29
+	.	4	32
+	+	7	28
+	+	4	32
+
+> ~/app/views/how/index.html.slim
+	"	19	66
+	^	19	67
+	.	19	66
+	+	17	0
+	+	19	66
+
+> ~/public/css/style.css
+	"	1159	14
+	^	1159	14
+	.	1159	14
+	+	19	22
+	+	1301	59
+	+	810	0
+	+	1159	13
+	+	1167	12
+	+	1159	14
+
+> ~/app/views/home/index.html.slim
+	"	11	56
+	^	11	57
+	.	11	56
+	+	11	56
+
+> ~/app/views/user_mailer/send_mail.html.erb
+	"	9	6
+	^	8	58
+	.	8	57
+	+	7	45
+	+	8	57
+
+> ~/app/controllers/contact_controller.rb
+	"	18	17
+	^	18	18
+	.	18	17
+	+	19	2
+	+	19	4
+	+	19	0
+	+	19	23
+	+	19	24
+	+	19	23
+	+	19	36
+	+	19	135
+	+	19	34
+	+	19	0
+	+	19	21
+	+	19	114
+	+	19	17
+	+	19	1
+	+	19	23
+	+	19	8
+	+	19	11
+	+	19	37
+	+	19	16
+	+	11	14
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	19	0
+	+	9	4
+	+	8	17
+	+	19	17
+	+	19	25
+	+	19	0
+	+	12	0
+	+	19	0
+	+	12	26
+	+	13	0
+	+	2	69
+	+	18	17
+
+> /var/log/unicorn/unicorn.log
+	"	144	0
+	.	1	0
+	+	1	0
+
+> ~/app/views/contact/index.html.slim
+	"	14	8
+	.	18	0
+	+	16	32
+	+	19	32
+	+	22	44
+	+	4	29
+	+	8	33
+	+	13	38
+	+	17	40
+	+	20	40
+	+	23	41
+	+	24	32
+	+	23	32
+	+	20	28
+	+	17	51
+	+	20	52
+	+	17	51
+	+	20	56
+	+	23	60
+	+	17	47
+	+	20	47
+	+	23	48
+	+	13	28
+	+	18	0
+
+> ~/config/routes.rb
+	"	12	40
+	^	12	41
+	.	12	40
+	+	13	0
+	+	12	40
+
+> ~/app/views/user_mailer/send_email.html.erb
+	"	7	0
+	^	10	18
+	.	10	18
+	+	14	0
+	+	1	0
+	+	13	0
+	+	1	0
+	+	9	0
+	+	12	0
+	+	13	0
+	+	13	114
+	+	13	0
+	+	10	24
+	+	11	5
+	+	7	18
+	+	8	15
+	+	10	18
+
+> /usr/share/vim/vim74/doc/help.txt
+	"	1	0
+
+> ~/infile
+	"	605	0
+
+> ~/app/controllers/faq_controller.rb
+	"	3	27
+	^	3	28
+	.	3	27
+	+	3	27
+
+> ~/app/controllers/how_controller.rb
+	"	3	28
+	^	3	29
+	.	3	28
+	+	3	28
+
+> app/controllers/how/index.html.slim
+	"	1	0
+
+> ~/app/views/about/index.html.slim
+	"	12	4
+	^	11	9
+	.	12	0
+	+	8	22
+	+	9	7
+	+	8	16
+	+	4	58
+	+	12	9
+	+	13	17
+	+	13	0
+	+	11	8
+	+	12	0
+
+> ~/app/models/about.rb
+	"	4	57
+	^	3	32
+	.	4	57
+	+	4	0
+	+	4	0
+	+	3	0
+	+	4	57
+
+> ~/db/migrate/20150605065339_add_attachment_image_to_abouts.rb
+	"	1	0
+
+> ~/db/migrate/20150522135851_add_attachment_image_to_sliders.rb
+	"	1	0
+
+> ~/db/migrate/20150522135838_create_sliders.rb
+	"	2	2
+
+> ~/db/migrate/20150519164730_create_rich_rich_images.rich.rb
+	"	1	0
+
+> ~/app/admin/slider.rb
+	"	1	0
+
+> ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
+	"	1	0
+	^	1	32
+	.	1	31
+	+	3	23
+	+	9	28
+	+	1	31
+
+> ~/db/migrate/20150518154011_create_abouts.rb
+	"	3	0
+
+> ~/db/migrate/20150524135857_add_attachment_image_to_abouts.rb
+	"	1	0
+
+> ~/20150522135851_add_attachment_image_to_sliders.rb
+	"	1	0
+
+> ~/app/admin/about.rb
+	"	23	2
+	^	23	3
+	.	23	0
+	+	13	0
+	+	13	0
+	+	3	31
+	+	8	33
+	+	13	0
+	+	13	0
+	+	23	0
+	+	16	17
+	+	23	0
+
+> ~/app/models/slider.rb
+	"	2	0
 
 > ~/public/css/bootstrap.css
 	"	220	0
@@ -462,30 +647,6 @@ $
 	"	2	0
 	.	2	0
 	+	2	0
-
-> ~/app/views/term/index.html.slim
-	"	7	28
-	^	7	29
-	.	7	28
-	+	7	28
-
-> ~/app/views/map/index.html.slim
-	"	10	36
-	.	10	36
-	+	10	36
-
-> ~/app/views/layouts/application.html.slim
-	"	1	0
-	^	35	35
-	.	35	0
-	+	3	0
-	+	35	34
-	+	40	0
-	+	46	0
-	+	35	35
-	+	36	0
-	+	35	0
-	j	1	0
 
 > ~/app/admin/faq.rb
 	"	7	20
