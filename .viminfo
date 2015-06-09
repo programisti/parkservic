@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/offse
+~MSle0~/places
 
 # Last Substitute String:
 $
@@ -38,6 +38,8 @@ $
 :w!
 
 # Search String History (newest to oldest):
+?/places
+?/INSERT
 ?/offse
 ?/setMarker
 ?/center
@@ -46,7 +48,6 @@ $
 ?/qweqweqwe
 ?/mailer
 ?/send
-?/INSERT
 ?/insert
 ?/social
 ?/.ptable h3
@@ -134,18 +135,32 @@ $
 	.
 
 # File marks:
-'0  13  57  ~/app/views/pricing/index.html.slim
-'1  10  2  ~/app/views/pricing/index.html.slim
-'2  31  14  ~/app/views/pricing/index.html.slim
-'3  73  10  ~/app/views/pricing/index.html.slim
-'4  2  33  ~/app/mailers/application_mailer.rb
-'5  2  31  ~/app/mailers/user_mailer.rb
-'6  104  0  ~/app/views/layouts/application.html.slim
-'7  57  217  ~/app/views/map/index.html.slim
-'8  70  41  ~/app/views/pricing/index.html.slim
-'9  34  24  ~/app/views/layouts/application.html.slim
+'0  629  44  ~/backup.bak
+'1  940  0  ~/backup.bak
+'2  13  57  ~/app/views/pricing/index.html.slim
+'3  10  2  ~/app/views/pricing/index.html.slim
+'4  31  14  ~/app/views/pricing/index.html.slim
+'5  73  10  ~/app/views/pricing/index.html.slim
+'6  2  33  ~/app/mailers/application_mailer.rb
+'7  2  31  ~/app/mailers/user_mailer.rb
+'8  104  0  ~/app/views/layouts/application.html.slim
+'9  57  217  ~/app/views/map/index.html.slim
 
 # Jumplist (newest first):
+-'  629  44  ~/backup.bak
+-'  426  61  ~/backup.bak
+-'  285  19  ~/backup.bak
+-'  243  16  ~/backup.bak
+-'  240  9  ~/backup.bak
+-'  237  19  ~/backup.bak
+-'  223  13  ~/backup.bak
+-'  220  9  ~/backup.bak
+-'  97  0  ~/backup.bak
+-'  952  0  ~/backup.bak
+-'  17  0  ~/backup.bak
+-'  1  0  ~/backup.bak
+-'  940  0  ~/backup.bak
+-'  2  0  ~/backup.bak
 -'  13  57  ~/app/views/pricing/index.html.slim
 -'  74  9  ~/app/views/pricing/index.html.slim
 -'  14  6  ~/app/views/pricing/index.html.slim
@@ -229,23 +244,11 @@ $
 -'  1  0  ~/db/migrate/20150605065339_add_attachment_image_to_abouts.rb
 -'  1  0  ~/db/migrate/20150522135851_add_attachment_image_to_sliders.rb
 -'  2  2  ~/db/migrate/20150522135838_create_sliders.rb
--'  1  0  ~/db/migrate/20150522135838_create_sliders.rb
--'  1  0  ~/db/migrate/20150519164730_create_rich_rich_images.rich.rb
--'  9  0  ~/db/migrate/20150605065339_add_attachment_image_to_abouts.rb
--'  3  2  ~/app/models/about.rb
--'  1  0  ~/app/admin/slider.rb
--'  1  0  ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
--'  4  24  ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
--'  3  0  ~/db/migrate/20150518154011_create_abouts.rb
--'  1  0  ~/db/migrate/20150518154011_create_abouts.rb
--'  3  30  ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
--'  1  0  ~/db/migrate/20150524135857_add_attachment_image_to_abouts.rb
--'  9  28  ~/db/migrate/20150522135852_add_attachment_image_to_abouts.rb
--'  1  0  ~/20150522135851_add_attachment_image_to_sliders.rb
--'  6  0  ~/db/migrate/20150522135838_create_sliders.rb
--'  8  10  ~/app/views/home/index.html.slim
 
 # History of marks within files (newest to oldest):
+
+> ~/backup.bak
+	"	629	44
 
 > ~/app/views/pricing/index.html.slim
 	"	13	57
