@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~h
 # Last Search Pattern:
-~MSle0~/setMarker
+~MSle0~/offse
 
 # Last Substitute String:
 $
@@ -38,6 +38,7 @@ $
 :w!
 
 # Search String History (newest to oldest):
+?/offse
 ?/setMarker
 ?/center
 ?/title
@@ -68,52 +69,102 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-"0	CHAR	0
-	წუთი
+"0	LINE	0
+	  .span4.tables
+	    .ptable
+	      h3
+	        | ერთ თვიანი ულიმიტო 
+	      ul
+	        li
+	          | სერვისების რაოდენობა - 
+	          strong ულიმიტო
+	        li
+	          | მოქმედების ვადა - 
+	          strong 30 დღე 
+	        li
+	          |  მომსახურების არეალი - 
+	          strong თბილისის გამზირები და ცენტრალური ქუჩები
+	      h4.entry-title.entry-title-pricing
+	        span.left-ribbon
+	        | 75 ლარი 
+	        span.right-ribbon
+	      a.sign-up href="#" data-toggle="modal" data-target="#myModal"
+	        span
+	          | ჩაერთეთ პარკსერვისში!
 ""1	LINE	0
-	</script>
+	  .span4.tables
+	    .ptable
+	      h3
+	        | ერთ დღიანი 
+	      ul
+	        li
+	          | სერვისების რაოდენობა - 
+	          strong ულიმიტო
+	        li
+	          | მოქმედების ვადა - 
+	          strong 1 დღე 
+	        li
+	          |  მომსახურების არეალი - 
+	          strong თბილისის გამზირები და ცენტრალური ქუჩები
+	      h4.entry-title.entry-title-pricing
+	        span.left-ribbon
+	        | 5 ლარი 
+	        span.right-ribbon
+	      a.sign-up href="#" data-toggle="modal" data-target="#myModal"
+	        span
+	          | ჩაერთეთ პარკსერვისში!
 "2	LINE	0
-	<script>
+	</script>
 "3	LINE	0
-	    center: new google.maps.LatLng(41.721223, 44.775080)
+	<script>
 "4	LINE	0
-	    map.setZoom(9);
+	    center: new google.maps.LatLng(41.721223, 44.775080)
 "5	LINE	0
+	    map.setZoom(9);
+"6	LINE	0
 	  map.setCenter(new google.maps.LatLng(41.721223, 44.775080));
 	  map.setZoom(9);
-"6	LINE	0
-	  var center = new google.maps.LatLng(41.721223, 44.775080);
 "7	LINE	0
 	  var center = new google.maps.LatLng(41.721223, 44.775080);
 "8	LINE	0
+	  var center = new google.maps.LatLng(41.721223, 44.775080);
+"9	LINE	0
 	    center: center 
-"9	CHAR	0
-	)
-	  };
 "-	CHAR	0
-	 
+	.
 
 # File marks:
-'0  104  0  ~/app/views/layouts/application.html.slim
-'1  57  217  ~/app/views/map/index.html.slim
-'2  49  41  ~/app/views/pricing/index.html.slim
-'3  34  24  ~/app/views/layouts/application.html.slim
-'4  27  19  ~/app/assets/javascripts/map.js
-'5  62  14  ~/app/assets/javascripts/map.js
-'6  62  61  ~/app/assets/javascripts/map.js
-'7  62  0  ~/app/assets/javascripts/map.js
-'8  26  2  ~/app/assets/javascripts/map.js
-'9  29  4  ~/app/assets/javascripts/map.js
+'0  13  57  ~/app/views/pricing/index.html.slim
+'1  10  2  ~/app/views/pricing/index.html.slim
+'2  31  14  ~/app/views/pricing/index.html.slim
+'3  73  10  ~/app/views/pricing/index.html.slim
+'4  2  33  ~/app/mailers/application_mailer.rb
+'5  2  31  ~/app/mailers/user_mailer.rb
+'6  104  0  ~/app/views/layouts/application.html.slim
+'7  57  217  ~/app/views/map/index.html.slim
+'8  70  41  ~/app/views/pricing/index.html.slim
+'9  34  24  ~/app/views/layouts/application.html.slim
 
 # Jumplist (newest first):
+-'  13  57  ~/app/views/pricing/index.html.slim
+-'  74  9  ~/app/views/pricing/index.html.slim
+-'  14  6  ~/app/views/pricing/index.html.slim
+-'  1  0  ~/app/views/pricing/index.html.slim
+-'  10  2  ~/app/views/pricing/index.html.slim
+-'  31  14  ~/app/views/pricing/index.html.slim
+-'  73  10  ~/app/views/pricing/index.html.slim
+-'  2  33  ~/app/mailers/application_mailer.rb
+-'  3  0  ~/app/mailers/application_mailer.rb
+-'  1  0  ~/app/mailers/application_mailer.rb
+-'  2  31  ~/app/mailers/user_mailer.rb
+-'  1  0  ~/app/mailers/user_mailer.rb
 -'  104  0  ~/app/views/layouts/application.html.slim
 -'  1  0  ~/app/views/layouts/application.html.slim
 -'  57  217  ~/app/views/map/index.html.slim
 -'  3  0  ~/app/views/map/index.html.slim
 -'  1  0  ~/app/views/map/index.html.slim
--'  49  41  ~/app/views/pricing/index.html.slim
+-'  70  41  ~/app/views/pricing/index.html.slim
 -'  2  0  ~/app/views/pricing/index.html.slim
--'  1  0  ~/app/views/pricing/index.html.slim
 -'  34  24  ~/app/views/layouts/application.html.slim
 -'  27  19  ~/app/assets/javascripts/map.js
 -'  1  0  ~/app/assets/javascripts/map.js
@@ -124,10 +175,6 @@ $
 -'  35  2  ~/app/assets/javascripts/map.js
 -'  37  0  ~/app/assets/javascripts/map.js
 -'  28  23  ~/app/assets/javascripts/map.js
--'  1  0  ~/app/mailers/user_mailer.rb
--'  2  0  ~/app/mailers/user_mailer.rb
--'  2  38  ~/app/mailers/application_mailer.rb
--'  1  0  ~/app/mailers/application_mailer.rb
 -'  4  32  ~/app/views/term/index.html.slim
 -'  1  0  ~/app/views/term/index.html.slim
 -'  89  48  ~/app/views/layouts/application.html.slim
@@ -138,7 +185,7 @@ $
 -'  11  56  ~/app/views/home/index.html.slim
 -'  1  0  ~/app/views/home/index.html.slim
 -'  1167  11  ~/public/css/style.css
--'  51  67  ~/app/views/pricing/index.html.slim
+-'  72  67  ~/app/views/pricing/index.html.slim
 -'  3  0  ~/app/mailers/user_mailer.rb
 -'  9  6  ~/app/views/user_mailer/send_mail.html.erb
 -'  1  0  ~/app/views/user_mailer/send_mail.html.erb
@@ -197,14 +244,114 @@ $
 -'  1  0  ~/20150522135851_add_attachment_image_to_sliders.rb
 -'  6  0  ~/db/migrate/20150522135838_create_sliders.rb
 -'  8  10  ~/app/views/home/index.html.slim
--'  1  0  ~/app/views/about
--'  23  2  ~/app/admin/about.rb
--'  1  0  ~/app/admin/about.rb
--'  4  0  ~/app/admin/slider.rb
--'  2  0  ~/app/models/slider.rb
--'  1  0  ~/app/models/slider.rb
 
 # History of marks within files (newest to oldest):
+
+> ~/app/views/pricing/index.html.slim
+	"	13	57
+	^	13	60
+	.	13	57
+	+	49	0
+	+	55	30
+	+	45	0
+	+	98	27
+	+	98	0
+	+	98	0
+	+	98	0
+	+	98	0
+	+	98	0
+	+	98	0
+	+	98	0
+	+	98	0
+	+	98	46
+	+	73	25
+	+	43	37
+	+	64	65
+	+	43	65
+	+	34	19
+	+	55	19
+	+	38	16
+	+	41	15
+	+	43	69
+	+	44	15
+	+	59	16
+	+	62	16
+	+	64	69
+	+	65	16
+	+	40	57
+	+	43	68
+	+	37	72
+	+	40	57
+	+	43	68
+	+	44	18
+	+	37	72
+	+	40	57
+	+	43	69
+	+	58	71
+	+	61	57
+	+	64	69
+	+	103	0
+	+	102	0
+	+	104	0
+	+	96	88
+	+	99	0
+	+	98	0
+	+	98	0
+	+	99	99
+	+	98	0
+	+	99	82
+	+	99	177
+	+	103	0
+	+	105	0
+	+	8	30
+	+	51	67
+	+	72	67
+	+	90	18
+	+	73	0
+	+	73	0
+	+	73	35
+	+	73	17
+	+	73	10
+	+	31	14
+	+	73	0
+	+	10	0
+	+	13	57
+
+> ~/app/mailers/application_mailer.rb
+	"	2	33
+	^	2	34
+	.	2	0
+	+	2	11
+	+	3	0
+	+	2	0
+
+> ~/app/mailers/user_mailer.rb
+	"	2	31
+	^	2	32
+	.	2	31
+	+	2	0
+	+	10	0
+	+	2	33
+	+	9	13
+	+	9	0
+	+	2	9
+	+	9	12
+	+	5	14
+	+	3	58
+	+	9	19
+	+	5	25
+	+	6	15
+	+	5	34
+	+	6	15
+	+	9	19
+	+	8	21
+	+	3	0
+	+	2	0
+	+	3	26
+	+	2	0
+	+	3	0
+	+	2	0
+	+	2	31
 
 > ~/app/views/layouts/application.html.slim
 	"	104	0
@@ -231,67 +378,6 @@ $
 	+	57	390
 	+	57	0
 	+	57	217
-
-> ~/app/views/pricing/index.html.slim
-	"	49	41
-	^	69	19
-	.	69	18
-	+	28	0
-	+	34	30
-	+	24	0
-	+	77	27
-	+	77	0
-	+	77	0
-	+	77	0
-	+	77	0
-	+	77	0
-	+	77	0
-	+	77	0
-	+	77	0
-	+	77	46
-	+	52	25
-	+	22	37
-	+	43	65
-	+	22	65
-	+	13	19
-	+	34	19
-	+	17	16
-	+	20	15
-	+	22	69
-	+	23	15
-	+	38	16
-	+	41	16
-	+	43	69
-	+	44	16
-	+	19	57
-	+	22	68
-	+	16	72
-	+	19	57
-	+	22	68
-	+	23	18
-	+	16	72
-	+	19	57
-	+	22	69
-	+	37	71
-	+	40	57
-	+	43	69
-	+	82	0
-	+	81	0
-	+	83	0
-	+	75	88
-	+	78	0
-	+	77	0
-	+	77	0
-	+	78	99
-	+	77	0
-	+	78	82
-	+	78	177
-	+	82	0
-	+	84	0
-	+	8	30
-	+	30	67
-	+	51	67
-	+	69	18
 
 > ~/app/assets/javascripts/map.js
 	"	27	19
@@ -339,42 +425,6 @@ $
 	+	60	0
 	+	29	0
 	+	28	23
-
-> ~/app/mailers/user_mailer.rb
-	"	1	0
-	^	5	6
-	.	2	0
-	+	2	0
-	+	10	0
-	+	2	33
-	+	9	13
-	+	9	0
-	+	2	9
-	+	9	12
-	+	5	14
-	+	3	58
-	+	9	19
-	+	5	25
-	+	6	15
-	+	5	34
-	+	6	15
-	+	9	19
-	+	8	21
-	+	3	0
-	+	2	0
-	+	3	26
-	+	2	0
-	+	3	0
-	+	2	0
-	+	2	0
-
-> ~/app/mailers/application_mailer.rb
-	"	2	38
-	^	2	38
-	.	2	38
-	+	2	11
-	+	3	0
-	+	2	38
 
 > ~/app/views/term/index.html.slim
 	"	4	32

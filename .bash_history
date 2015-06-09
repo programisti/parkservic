@@ -1,19 +1,3 @@
-ls
-ls
-cd ..
-mv rails/parkservice/ park
-ls
-rm rails
-rm -rf rails
-mv park/ rails
-ls
-cd rails
-bundle install
-vim config/database.yml 
-service unicorn restart
-sudo service unicorn restart
-ls /data
-where is unicorn.log
 \whereis unicorn.log
 vim /etc/unicorn.conf 
 vim /var/log/unicorn/unicorn.log
@@ -490,4 +474,27 @@ vim app/views/map/index.html.slim
 sudo service unicorn restart
 vim app/views/layouts/application.html.slim 
 sudo service unicorn restart
+exit
+git add .
+git commit -m 'qweqew'
+git push origin master
+git status
+git add .
+git add -A
+sudo git add .
+sudo git add -A
+sudo git commit -m 'latest'
+sudo git push origin master
+vim app/mailers/user_mailer.rb 
+vim app/mailers/application_mailer.rb 
+sudo service unicorn restart
+vim app/views/pricing/index.html.slim 
+sudo service unicorn restart
+vim app/views/pricing/index.html.slim 
+sudo service unicorn restart
+vim app/views/pricing/index.html.slim 
+sudo service unicorn restart
+vim app/views/pricing/index.html.slim 
+sudo service unicorn restart
+exi
 exit
