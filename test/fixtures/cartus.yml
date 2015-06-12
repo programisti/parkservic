@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  PurchaseDesc: MyString
+  PurchaseAmt: MyString
+  CountryCode: MyString
+  CurrencyCode: MyString
+  MerchantName: MyString
+  MerchantURL: MyString
+  MerchantCity: MyString
+  MerchantID: MyString
+  Language: MyString
+
+two:
+  PurchaseDesc: MyString
+  PurchaseAmt: MyString
+  CountryCode: MyString
+  CurrencyCode: MyString
+  MerchantName: MyString
+  MerchantURL: MyString
+  MerchantCity: MyString
+  MerchantID: MyString
+  Language: MyString

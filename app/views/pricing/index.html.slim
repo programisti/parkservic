@@ -1,6 +1,8 @@
 link[rel="stylesheet" type="text/css" href="css/jquery-ui.min.css"]
 script[src="js/jquery-ui.min.js"]
 
+= stylesheet_link_tag "pricing"
+= javascript_include_tag "pricing"
 
 .row
   .headline.marginbottom40.margintop40.center
@@ -9,6 +11,16 @@ script[src="js/jquery-ui.min.js"]
 .row
   .span4.tables
     .ptable
+      form#form1 method="POST" action="https://e-commerce.cartubank.ge/servlet/Process3DSServlet/3dsproxy_init.jsp"
+        input name="PurchaseDesc" type="hidden" value="ert dgiani ulimito!ert tviani ulimito"
+        input name="PurchaseAmt" type="hidden" value="5.00"
+        input name="CountryCode" type="hidden" value="268"
+        input name="CurrencyCode" type="hidden" value="981"
+        input name="MerchantName" type="hidden" value="parkservice"
+        input name="MerchantURL" type="hidden" value="http://localhost:3000/pricing"
+        input name="MerchantCity" type="hidden" value="Tbilisi"
+        input name="MerchantID" type="hidden" value="000000008001005-00000001"
+        input name="xDDDSProxy.Language" type="hidden" value="01"
       h3
         | ერთ დღიანი ულიმიტო 
       ul
@@ -25,11 +37,21 @@ script[src="js/jquery-ui.min.js"]
         span.left-ribbon
         | 5 ლარი 
         span.right-ribbon
-      a.sign-up href="#" data-toggle="modal" data-target="#myModal"
+      a.sign-up href="#" data-target="#modal1" data-toggle="modal"
         span
           | ჩაერთეთ პარკსერვისში!
   .span4.tables
     .ptable
+      form#form2 method="POST" action="https://e-commerce.cartubank.ge/servlet/Process3DSServlet/3dsproxy_init.jsp"
+        input name="PurchaseDesc" type="hidden" value="1 kviriani ulimito!ert kviriani ulimito"
+        input name="PurchaseAmt" type="hidden" value="25.00"
+        input name="CountryCode" type="hidden" value="268"
+        input name="CurrencyCode" type="hidden" value="981"
+        input name="MerchantName" type="hidden" value="parkservice"
+        input name="MerchantURL" type="hidden" value="http://localhost:3000/pricing"
+        input name="MerchantCity" type="hidden" value="Tbilisi"
+        input name="MerchantID" type="hidden" value="000000008001005-00000001"
+        input name="xDDDSProxy.Language" type="hidden" value="01"
       h3
         | ერთ კვირიანი ულიმიტო
       ul
@@ -46,11 +68,21 @@ script[src="js/jquery-ui.min.js"]
         span.left-ribbon
         |  25 ლარი 
         span.right-ribbon
-      a.sign-up href="#" data-toggle="modal" data-target="#myModal"
+      a.sign-up href="#" data-target="#modal2" data-toggle="modal"
         span
           | ჩაერთეთ პარკსერვისში!
   .span4.tables
     .ptable
+      form#form3 method="POST" action="https://e-commerce.cartubank.ge/servlet/Process3DSServlet/3dsproxy_init.jsp"
+        input name="PurchaseDesc" type="hidden" value="1 tviani ulimito!pack=3"
+        input name="PurchaseAmt" type="hidden" value="75.00"
+        input name="CountryCode" type="hidden" value="268"
+        input name="CurrencyCode" type="hidden" value="981"
+        input name="MerchantName" type="hidden" value="parkservice"
+        input name="MerchantURL" type="hidden" value="http://localhost:3000/pricing"
+        input name="MerchantCity" type="hidden" value="Tbilisi"
+        input name="MerchantID" type="hidden" value="000000008001005-00000001"
+        input name="xDDDSProxy.Language" type="hidden" value="01"
       h3
         | ერთ თვიანი ულიმიტო 
       ul
@@ -67,7 +99,7 @@ script[src="js/jquery-ui.min.js"]
         span.left-ribbon
         | 75 ლარი 
         span.right-ribbon
-      a.sign-up href="#" data-toggle="modal" data-target="#myModal"
+      a.sign-up href="#" data-target="#modal3" data-toggle="modal"
         span
           | ჩაერთეთ პარკსერვისში!
 .row style="display:none;"
@@ -85,6 +117,104 @@ script[src="js/jquery-ui.min.js"]
       hr
       input.btn.orange-button.span3[type="submit" value="შემოწმება"]
 
+#modal1.modal.hide role="dialog"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal"
+          | &times;
+        h3.modal-title მონაცემების გადამოწმება და პირობებზე დათანხმება 
+      .modal-body
+        | ავტომობილის ნომერი 
+        input#car1.form-control placeholder="xxx-111 ან xx-000-yy"
+        br
+        br
+        br
+        ul
+          li
+            i პაკეტი "ერთ დღიანი ულიმიტო" 
+          li 
+            i ღირებულება - 5 ლარი
+        br
+        br
+        p გადახდის ღილაკზე დაჭერით ვადასტურებ, რომ 
+        table style="margin-left:50px;"
+          tr
+            td
+              input#terms1 type="checkbox" გავეცანი და ვეთანხმები სერვისის მიღების პირობებს
+          tr
+            td
+              input#valid1 type="checkbox" ავტომობილის ნომერი სწორადაა შეყვანილი.
+
+        br
+        br
+        a#pack1.btn.orange-button href="#" გადახდა
+
+#modal2.modal.hide role="dialog"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal"
+          | &times;
+        h3.modal-title მონაცემების გადამოწმება და პირობებზე დათანხმება 
+      .modal-body
+        | ავტომობილის ნომერი 
+        input#car2.form-control placeholder="xxx-111 ან xx-000-yy"
+        br
+        br
+        br
+        ul
+          li
+            i პაკეტი "ერთ კვირიანი ულიმიტო" 
+          li 
+            i ღირებულება - 25 ლარი
+        br
+        br
+        p გადახდის ღილაკზე დაჭერით ვადასტურებ, რომ 
+        table style="margin-left:50px;"
+          tr
+            td
+              input#terms2 type="checkbox" გავეცანი და ვეთანხმები სერვისის მიღების პირობებს
+          tr
+            td
+              input#valid2 type="checkbox" ავტომობილის ნომერი სწორადაა შეყვანილი.
+
+        br
+        br
+        a#pack2.btn.orange-button href="#" გადახდა
+
+#modal3.modal.hide role="dialog"
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close type="button" data-dismiss="modal"
+          | &times;
+        h3.modal-title მონაცემების გადამოწმება და პირობებზე დათანხმება 
+      .modal-body
+        | ავტომობილის ნომერი 
+        input#car3.form-control placeholder="xxx-111 ან xx-000-yy"
+        br
+        br
+        br
+        ul
+          li
+            i პაკეტი "ერთ თვიანი ულიმიტო" 
+          li 
+            i ღირებულება - 75 ლარი
+        br
+        br
+        p გადახდის ღილაკზე დაჭერით ვადასტურებ, რომ 
+        table style="margin-left:50px;"
+          tr
+            td
+              input#terms3 type="checkbox" გავეცანი და ვეთანხმები სერვისის მიღების პირობებს
+          tr
+            td
+              input#valid3 type="checkbox" ავტომობილის ნომერი სწორადაა შეყვანილი.
+
+        br
+        br
+        a#pack3.btn.orange-button href="#" გადახდა
 
 
 #myModal.modal.hide role="dialog"

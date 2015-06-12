@@ -4,10 +4,6 @@ class ContactController < ApplicationController
     @contact = Contact.last
   end
 
-  def send_mail2
-    render "index"
-  end
-  
   def send_mail 
     @mail = params[:mail] 
     @name = params[:name]
